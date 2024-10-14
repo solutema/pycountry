@@ -1,81 +1,10 @@
 Changes
 =======
 
-24.6.2.dev0 (Unreleased)
-------------------------
-
-None, yet.
-
-
-24.6.1 (2024-06-01)
--------------------
-
-- **Breaking change**: Reverted the fallback to name when country common_name
-  or official_name attributes not available, which was added in 23.12.11.
-
-- Fixed import of importlib_metadata to importlib.metadata
-
-- Fixed bug causing parent subdivision codes to be returned with additional
-  country code preceding (i.e. GB-GB-ENG instead of GB-ENG)
-
-- Update to iso-codes 4.16.0. (Thanks to musicinmybrain!)
-
-
-23.12.11 (2023-12-11)
----------------------
-
-- ~~Added fallback to name when common_name or official_name country attributes
-  are missing~~ Reverted in v24.6.1.
-
-- Added support for adding and removing country records, as well as casting to
-  dict
-
-- Improve performance speed by checking for non-ascii chars before removing
-  accents
-
-- Added search_fuzzy method to subdivisions
-
-- Added type hinting, created py.typed file, and added mypy checks to CI
-
-
-23.12.7 (2023-12-07)
---------------------
-
-- Dropped support for end-of-life Python 3.6 and 3.7.
-
-- Added support for Python 3.11 and Python 3.12.
-
-- Added dependency on importlib-resources for Python 3.8.
-
-- Dropped implicit dependency on setuptools for pkg_resources.
-  (Thanks to D3X!)
-
-- Update to iso-codes 4.15.0. (Thanks to alanorth!)
-
-- Removes iso3166.mo files and opts for newer iso3166-1.mo and iso3166-3.mo
-  files for Country and Historic Country Translations respectively.
-
-  Warning: This requires an update in your application code when you previously
-  used to access the iso3166 gettext data.
-
-
-22.3.5 (2022-03-05)
--------------------
-
-- Update to iso-codes 4.9.0.
-
-
-22.1.10 (2022-01-10)
---------------------
-
-- Update to iso-codes 4.8.0. (Thanks to llimeht!)
-
-
 20.7.3 (2020-07-03)
 -------------------
 
 - Fix bug #37: (accidental) unconditional pkg_resources import.
-  (thanks, crbunney)
 
 
 20.7.2 (2020-07-02)
@@ -84,13 +13,13 @@ None, yet.
 - Add (auto-generated) __version__ attribute to the main module.
   (Fixes issue #4)
 
-- Add fuzzy search to historic countries. (Fixes issue #26)
+- Add fuzzy search to historic countries. (Fixe issue #26)
 
 - Update to iso-codes 4.5.0.
 
-- PR 9: Clean up the normalization (lower casing) of values in indexes and
-  searches.  See PR https://github.com/flyingcircusio/pycountry/pull/9 for
-  detailed discussion. This also fixed issue #8.
+- PR 9: Clean up the normalization (lower casing) of values in indexes and searches.
+  See PR https://github.com/flyingcircusio/pycountry/pull/9 for detailed
+  discussion. This also fixed issue #8.
 
 - Smaller cleanups and build environment version bumps.
 
@@ -99,7 +28,7 @@ None, yet.
 
 - PR 33: Remove defunct bugtracker link from README (thanks, jwilk)
 
-- PR 32: (Somewhat hilarious) Typo (thanks, jwilk)
+- P3 32: (Somewhat hilarious) Typo (thanks, jwilk)
 
 - Moved to Git/Github; switched from Bitbucket Pipelines to Travis builds.
 
@@ -265,8 +194,7 @@ I overlooked in the last releases and a few enhancements.
 16.10.23rc3 (2016-10-23)
 ------------------------
 
-- Incorporate some typos and suggested README improvements from @Pander in
-  #13375.
+- Incorporate some typos and suggested README improvements from @Pander in #13375.
 
 
 16.10.23rc2 (2016-10-23)
@@ -282,7 +210,7 @@ This is a major change. The upstream packages have been revamped from the
 former XML databases to use JSON. They adapted their schemata a bit and thus
 made some of the structures in pycountry superfluous (yay!). Memory usage went
 down when all databases are loaded (32.7 MiB down from 83.6 MiB) and
-performance has gone up (not measured scientifically, but it's noticeable when
+performance has gone up (not measured scientifically, but it's noticable when
 loading the DBs in an interactive session).
 
 To mark this major change, I'm also switch from the existing (not useful)
